@@ -87,3 +87,9 @@ HEADER1
 /*********** 
 MEDIAUERY 
 ***********/
+
+@media only screen and (max-width: 552px) {
+    .upper-view .sidebar {
+        width: 50px;
+    }
+}

@@ -115,8 +115,11 @@ PLAYER
     align-items: center;
 }
 
+/* PLAYER INFO */
+
 .player-info {
     height: 42px;
+    min-width: 220px;
 }
 
 .player-info>.row {
@@ -132,6 +135,15 @@ PLAYER
     aspect-ratio: 1;
 }
 
+.info-name {
+    padding: 12px;
+    flex-grow: 1;
+}
+
+.info-name span {
+    display: block;
+}
+
 .info-name :first-child {
     color: white;
     font-size: 11px;
@@ -143,16 +155,42 @@ PLAYER
 }
 
 .info-like {
-    font-size: 15px;
-    color: --grey;
+    padding-top: 5px;
 }
+
+.info-like i {
+    font-size: 15px;
+    color: var(--grey);
+    padding: 10px 5px;
+}
+
 
 /*********** 
 MEDIAUERY 
 ***********/
+
+/* SIDEBAR */
 
 @media only screen and (max-width: 552px) {
     .upper-view .sidebar {
         width: 50px;
     }
 }
+
+/* PLAYER-INFO */
+
+@media only screen and (max-width: 639px) {
+    .player .player-info {
+        min-width: 170px;
+    }
+
+    .player-info .info-like {
+        flex-direction: column;
+    }
+
+    .info-like i {
+        padding: 1px;
+    }
+}
+
+

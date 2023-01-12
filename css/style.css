@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul,
+ol,
+menu {
+    list-style-type: none;
+}
+
+:root {
+    --darkgrey: #282828;
+    --darkblue: #080B12;
+    --blue: #141922;
+    --grey: #A3A3A3; 
+}
+
+/*********** 
+CONTAINERS 
+***********/
+
+/*********** 
+TITLES & TEXTS
+***********/
+
+/*********** 
+BUTTONS & ICONS 
+***********/
+
+/*********** 
+UTILITY CLASS
+***********/
+
+.flex {
+    display: flex;
+}
+
+/*********** 
+LAYOUT
+***********/
+
+body.flex {
+    flex-direction: column;
+    height: 100vh;
+}
+
+.upper-view {
+    flex-grow: 1;
+}
+
+.player {
+    display: block;
+    height: 90px;
+    background-color: var(--darkgrey);
+}
+
+.upper-view>.row {
+    height: 100%;
+}
+
+.upper-view .sidebar {
+    width: 230px;
+    height: 100%;
+    background-color: black;
+}
+
+.upper-view .main-content {
+    flex-grow: 1;
+    height: 100%;
+}
+
+/*********** 
+HEADER1
+***********/
+
+.header1 {
+    background-color: var(--darkblue);
+    height: 90px;
+}
+
+/*********** 
+MEDIAUERY 
+***********/

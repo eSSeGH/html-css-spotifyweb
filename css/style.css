@@ -58,6 +58,10 @@ UTILITY CLASS
     display: flex;
 }
 
+.relative {
+    position: relative;
+}
+
 /*********** 
 LAYOUT
 ***********/
@@ -113,6 +117,7 @@ PLAYER
 .player>.row {
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 /* PLAYER INFO */
@@ -166,6 +171,64 @@ PLAYER
     padding: 10px 5px;
 }
 
+/* PLAYER MAIN */
+
+.player-main {
+    flex-direction: column;
+    width: 60%;
+}
+
+.main-button {
+    margin-bottom: 16px;
+}
+
+.main-button>ul {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.player-main .main-length_bar {
+    align-items: baseline;
+    flex-basis: 100%;
+    gap: 8px;
+}
+
+[class^="length_bar"] {
+    display: inline-block;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.length_bar-dark {
+    background-color: var(--grey);
+    flex-grow: 1;
+}
+
+.length_bar-light {
+    background-color: white;
+    width: 25%;
+    position: absolute;
+    top: 0; 
+    left: 0;
+}
+
+.main-length_bar span {
+    flex-basis: calc(100%/20);
+    flex-shrink: 0;
+    font-size: 8px;
+    color: white;
+}
+
+.main-button i {
+    color: white;
+    font-size: 16px;
+}
+
+.main-button .button-play {
+    font-size: 32px;
+    margin: 0 8px;
+}
 
 /*********** 
 MEDIAUERY 

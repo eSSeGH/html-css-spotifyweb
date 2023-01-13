@@ -7,6 +7,7 @@
 html {
     font-family: 'Rubik', sans-serif;
 }
+
 img,
 figure {
     max-width: 100%;
@@ -18,18 +19,19 @@ menu {
     list-style-type: none;
 }
 
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
 :root {
     --darkgrey: #282828;
     --darkblue: #080B12;
     --blue: #141922;
-    --grey: #A3A3A3; 
+    --grey: #A3A3A3;
 }
 
-/*********** 
-CONTAINERS 
-***********/
-
-/*********** 
+/***********
 TITLES & TEXTS
 ***********/
 
@@ -46,11 +48,7 @@ h3 {
     font-size: 11px;
 }
 
-/*********** 
-BUTTONS & ICONS 
-***********/
-
-/*********** 
+/***********
 UTILITY CLASS
 ***********/
 
@@ -62,7 +60,7 @@ UTILITY CLASS
     position: relative;
 }
 
-/*********** 
+/***********
 LAYOUT
 ***********/
 
@@ -98,7 +96,7 @@ body.flex {
     height: 100%;
 }
 
-/*********** 
+/***********
 HEADER1
 ***********/
 
@@ -107,7 +105,7 @@ HEADER1
     height: 90px;
 }
 
-/*********** 
+/***********
 PLAYER
 ***********/
 .player {
@@ -167,8 +165,7 @@ PLAYER
 }
 
 .info-like i {
-    font-size: 15px;
-    padding: 0 7px;
+    flex-basis: 1%;
     color: var(--grey);
 }
 
@@ -211,7 +208,7 @@ PLAYER
     background-color: white;
     width: 25%;
     position: absolute;
-    top: 0; 
+    top: 0;
     left: 0;
 }
 
@@ -254,8 +251,98 @@ PLAYER
     flex-grow: 1;
 }
 
-/*********** 
-MEDIAUERY 
+/***********
+SIDEBAR
+***********/
+
+.sidebar {
+    flex-direction: column;
+}
+
+.playlist {
+    color: var(--grey);
+}
+
+.container {
+    width: 180px;
+    margin: 0 auto;
+}
+
+/* LOGO */
+
+.logo {
+    height: 85px;
+    align-items: center;
+}
+
+.logo .logo-big {
+    height: 42px;
+}
+
+.logo-small {
+    display: none;
+    height: 30px;
+}
+
+/* NAVIGATION */
+
+.navigation {
+    flex-wrap: wrap;
+}
+
+.navigation a {
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+    padding-left: 20px;
+    height: 35px;
+    gap: 6px;
+    color: var(--grey);
+}
+
+.navigation img {
+    height: 24px;
+    color: #a1a1a1;
+}
+
+.navigation a:first-child {
+    color: white;
+}
+
+/* PLAYLIST */
+
+.playlist h3 {
+    color: white;
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+.playlist-list i {
+    font-size: 38px;
+}
+
+.playlist-list .flex {
+    align-items: center;
+    font-size: 16px;
+    gap: 7px;
+}
+
+.playlist-list {
+    flex-direction: column;
+    font-size: 14px;
+    gap: 20px;
+}
+
+/* DEBUG */
+
+.download,
+.profile {
+    display: none;
+}
+
+
+/***********
+MEDIAUERY
 ***********/
 
 /* SIDEBAR */
@@ -264,7 +351,30 @@ MEDIAUERY
     .upper-view .sidebar {
         width: 50px;
     }
-}
 
+    .logo .logo-big {
+        display: none;
+    }
+
+    .logo .logo-small {
+        display: block ;
+    }
+
+    .sidebar.flex {
+        align-items: flex-start;
+    }
+
+    .navigation .navigation-a {
+        padding: 0
+    }
+
+    .navigation-a :not(img) {
+        display: none;
+    }
+
+    .playlist {
+        display: none;
+    }
+}
 
 

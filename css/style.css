@@ -124,7 +124,8 @@ PLAYER
 
 .player-info {
     height: 42px;
-    width: 220px;
+    flex-grow: 1;
+    max-width: 220px;
 }
 
 .player-info>.row {
@@ -175,7 +176,8 @@ PLAYER
 
 .player-main {
     flex-direction: column;
-    width: 60%;
+    flex-grow: 2;
+    max-width: 525px;
 }
 
 .main-button {
@@ -188,7 +190,7 @@ PLAYER
     gap: 20px;
 }
 
-.player-main .main-length_bar {
+.main-length_bar {
     align-items: baseline;
     flex-basis: 100%;
     gap: 8px;
@@ -228,6 +230,33 @@ PLAYER
 .main-button .button-play {
     font-size: 32px;
     margin: 0 8px;
+}
+
+/* PLAYER SIDE */
+
+.player-side {
+    min-width: 170px;
+    max-width: 220px;
+    padding: 8px 0 8px 8px;
+    color: white;
+    flex-grow: 1;
+}
+
+.player-side ul {
+    align-items: center;
+}
+
+.player-side li {
+    padding: 0 4px;
+}
+
+.player-side li.flex {
+    align-items: center;
+    width: 100%;
+}
+
+.player-side .length_bar-dark {
+    flex-grow: 1;
 }
 
 /*********** 

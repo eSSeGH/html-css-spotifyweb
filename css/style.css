@@ -267,10 +267,12 @@ SIDEBAR
 
 .sidebar {
     flex-direction: column;
+    height: 100vh - 90px;
 }
 
 .playlist {
     color: var(--grey);
+    margin-bottom: auto;
 }
 
 .container {
@@ -306,8 +308,8 @@ SIDEBAR
     flex-basis: 100%;
     padding-left: 20px;
     height: 35px;
-    gap: 6px;
     color: var(--grey);
+    gap: 6px;
 }
 
 .navigation a:first-child {
@@ -345,13 +347,38 @@ SIDEBAR
     gap: 20px;
 }
 
-/* DEBUG */
+/* DOWNLOAD */
 
-.download,
-.profile {
-    display: none;
+.download {
+    color: var(--grey);
+    border-bottom: 2px solid var(--grey);
+    align-items: center;
+    flex-basis: 36px;
+    font-size: 14px;
+    gap: 6px;
+    margin-top: auto;
 }
 
+.download img {
+    height: 14px;
+}
+
+/* PROFILE */
+
+.profile {
+    color: white;
+    align-items: center;
+    flex-basis: 40px;
+    font-size: 16px;
+    gap: 6px;
+}
+
+.profile img {
+    height: 24px;
+    aspect-ratio: 1/1;
+    background-color: var(--grey);
+    border-radius: 50%;
+}
 
 /***********
 MEDIAUERY
@@ -360,10 +387,25 @@ MEDIAUERY
 /* SIDEBAR */
 
 @media only screen and (max-width: 552px) {
+
+    /* SIDEBAR */
     .upper-view .sidebar {
         width: 50px;
     }
 
+    .sidebar.flex {
+        align-items: center;
+    }
+
+    .container {
+        width: auto;
+    }
+
+    /* LOGO */
+    .logo {
+        height: 40px;
+    }
+    
     .logo .logo-big {
         display: none;
     }
@@ -372,8 +414,10 @@ MEDIAUERY
         display: block ;
     }
 
-    .sidebar.flex {
-        align-items: center;
+    /* NAVIGATION */
+    .navigation-a {
+        text-align: center;
+        justify-content: center;
     }
 
     .navigation a.navigation-a {
@@ -385,9 +429,22 @@ MEDIAUERY
         display: none;
     }
 
+    /* PLAYLIST */
     .playlist {
         display: none;
     }
+
+    /* DOWNLOAD & PROFILE */
+    .download :not(img),
+    .profile :not(img) {
+        display: none;
+    }
+
+    .download {
+        border-bottom: 0;
+    }
+
+
 }
 
 @media only screen and (max-width: 442px) {

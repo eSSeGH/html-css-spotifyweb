@@ -66,6 +66,7 @@ body.flex {
 
 .upper-view {
     flex-grow: 1;
+    overflow-y: auto;
 }
 
 .player {
@@ -103,6 +104,7 @@ HEADER1
 /***********
 PLAYER
 ***********/
+
 .player {
     padding: 0 10px;
 }
@@ -268,6 +270,7 @@ SIDEBAR
 .sidebar {
     flex-direction: column;
     height: 100vh - 90px;
+    overflow: hidden;
 }
 
 .playlist {
@@ -405,7 +408,7 @@ MEDIAUERY
     .logo {
         height: 40px;
     }
-    
+
     .logo .logo-big {
         display: none;
     }

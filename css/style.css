@@ -24,6 +24,8 @@ a {
     --darkblue: #080B12;
     --blue: #141922;
     --grey: #A3A3A3;
+    --green: rgb(111, 255, 0);
+    --main-gap: 9px;
 }
 
 /***********
@@ -41,6 +43,10 @@ h2 {
 
 h3 {
     font-size: 11px;
+}
+
+.t14 {
+    font-size: 14px;
 }
 
 .t11 {
@@ -308,7 +314,7 @@ SIDEBAR
 }
 
 .navigation a:first-child {
-    border-left: 5px solid rgb(111, 255, 0);
+    border-left: 5px solid var(--green);
     padding-left: 15px;
     color: white;
 }
@@ -392,9 +398,13 @@ MAIN-CONTENT
 .header1 {
     background-color: var(--darkblue);
     height: 90px;
+    width: calc(100% - 230px);
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+    left: 230px;
     justify-content: flex-end;
     align-items: center;
-    padding: 0 10px;
 }
 
 .upgrade-button {
@@ -407,13 +417,73 @@ MAIN-CONTENT
 }
 
 /* CONTENT SELECTION */
+
+.content-selection {
+    background-color: var(--blue);
+}
 .container2 {
     padding: 0 20px;
+}
+
+.content-selection h2 {
+    color: white;
+    margin-top: 20px;
+}
+
+.content-selection h3 {
+    color: var(--grey);
+    margin-top: 10px;
+}
+
+/* NAVIGATION BAR */
+
+.nav1 {
+    margin-top: 90px;
+    background-color: var(--blue);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.nav1 li {
+    color: var(--grey);
+    height: 55px;
+    padding: 14px 9px;
+}
+
+.nav1-link {
+    height: 28px;
+}
+
+.nav1-link:after {
+    display: none;
+    content: "";
+    width: 32px;
+    border: 2px solid var(--green);
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
 
 
+
+/* RECENTLY */
+
+.recently-album .row {
+    gap: var(--main-gap);
+}
+
+.album-card {
+    flex-basis: calc(100%/6 - 5*var(--main-gap)/6);
+}
+
+.album-card img {
+    width: 100%;
+}
 
 
 /***********

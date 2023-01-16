@@ -421,8 +421,15 @@ MAIN-CONTENT
 .content-selection {
     background-color: var(--blue);
 }
+
 .container2 {
     padding: 0 20px;
+}
+
+.content-selection h1 {
+    color: white;
+    padding-top: 25px;
+    padding-bottom: 30px;
 }
 
 .content-selection h2 {
@@ -454,6 +461,7 @@ MAIN-CONTENT
 
 .nav1-link {
     height: 28px;
+    line-height: 28px;
 }
 
 .nav1-link:after {
@@ -462,14 +470,10 @@ MAIN-CONTENT
     width: 32px;
     border: 2px solid var(--green);
     position: absolute;
-    bottom: 0px;
+    bottom: -4px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-
-
-
 
 /* RECENTLY */
 
@@ -479,6 +483,7 @@ MAIN-CONTENT
 
 .album-card {
     flex-basis: calc(100%/6 - 5*var(--main-gap)/6);
+    text-align: center;
 }
 
 .album-card img {
@@ -554,5 +559,11 @@ MEDIAUERY
 
     .download {
         border-bottom: 0;
+    }
+
+    /* HEADER */
+    .header1 {
+        left: 50px;
+        width: calc(100% - 50px);
     }
 }

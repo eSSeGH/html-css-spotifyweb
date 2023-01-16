@@ -254,9 +254,8 @@ PLAYER
     gap: 4px;
 }
 
-.player-side li.flex {
-    align-items: center;
-    width: 100%;
+.player-side li.:nth-child(3) {
+    flex-grow: 1;
 }
 
 .player-side .length_bar-dark {
@@ -341,7 +340,6 @@ SIDEBAR
 .playlist-list .flex {
     align-items: center;
     font-size: 16px;
-    gap: 7px;
 }
 
 .playlist-list {

@@ -524,18 +524,30 @@ MAIN-CONTENT
 MEDIAUERY
 ***********/
 
-/* SIDEBAR */
-
 @media only screen and (max-width: 890px) {
-    .album-card {
+    /* MAIN CONTENT */
+    .recently .album-card  {
         flex-basis: calc(100%/4 - 3*var(--main-gap)/4);
     }
+
+    .popolar-album .row,
+    .generated-album .row {
+        width: calc(100%/2 - var(--main-gap)/2);
+    }
+
 }
 
 @media only screen and (max-width: 680px) {
-    .album-card {
+    /* MAIN CONTENT */
+    .recently .album-card  {
         flex-basis: calc(100%/2 - var(--main-gap)/2);
     }
+
+    .popolar-album .row,
+    .generated-album .row {
+        width: calc(100% - var(--main-gap)/2);
+    }
+
 }
 
 @media only screen and (max-width: 552px) {

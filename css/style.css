@@ -194,7 +194,6 @@ dello spazio massimo che può occupare .main-button, ma ne sono consapevole. */
     gap: 5px;
 }
 
-
 .main-button i {
     color: white;
     font-size: 16px;
@@ -268,6 +267,8 @@ SIDEBAR
     flex-direction: column;
     height: 100vh - 90px;
     overflow: hidden;
+    position: sticky;
+    top: 0;
 }
 
 .playlist {
@@ -393,6 +394,10 @@ SIDEBAR
 MAIN-CONTENT
 ***********/
 
+.main-content {
+    overflow: scroll;
+}
+
 /* HEADER */
 
 .header1 {
@@ -405,6 +410,7 @@ MAIN-CONTENT
     left: 230px;
     justify-content: flex-end;
     align-items: center;
+    z-index: 1;
 }
 
 .upgrade-button {

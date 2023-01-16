@@ -441,6 +441,7 @@ MAIN-CONTENT
 }
 
 .main-content-titles {
+    padding-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -493,31 +494,25 @@ MAIN-CONTENT
     width: 100%;
 }
 
-/* GENERATED */
+/* GENERATED & POPOLAR*/
 
+.popolar-album .row,
 .generated-album .row {
     gap: var(--main-gap);
     width: calc(100%/3 - var(--main-gap)/2);
 }
 
+.popolar .album-card ,
 .generated .album-card {
     flex-basis: calc(100%/2 - var(--main-gap)/2);
     text-align: center;
 }
 
-/* GENERATED */
+/* POPOLAR */
 
-/* .generated-album .row {
-    gap: var(--main-gap);
-    width: calc(100%);
+.popolar-album img {
+    border-radius: 50%;
 }
-
-.generated .album-card {
-    flex-basis: calc(100%/2 - var(--main-gap)/2);
-    text-align: center;
-} */
-
-
 
 /***********
 MEDIAUERY

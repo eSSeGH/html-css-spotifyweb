@@ -43,6 +43,10 @@ h3 {
     font-size: 11px;
 }
 
+.t11 {
+    font-size: 11px;
+}
+
 /***********
 UTILITY CLASS
 ***********/
@@ -93,15 +97,6 @@ body.flex {
 }
 
 /***********
-HEADER1
-***********/
-
-.header1 {
-    background-color: var(--darkblue);
-    height: 90px;
-}
-
-/***********
 PLAYER
 ***********/
 
@@ -148,7 +143,6 @@ PLAYER
 
 .name-text :first-child {
     color: white;
-    font-size: 11px;
 }
 
 .name-text :last-child {
@@ -238,7 +232,6 @@ dello spazio massimo che può occupare .main-button, ma ne sono consapevole. */
     font-size: 8px;
     color: white;
 }
-
 
 /* PLAYER SIDE */
 
@@ -389,6 +382,39 @@ SIDEBAR
     background-color: var(--grey);
     border-radius: 50%;
 }
+
+/***********
+MAIN-CONTENT
+***********/
+
+/* HEADER */
+
+.header1 {
+    background-color: var(--darkblue);
+    height: 90px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.upgrade-button {
+    height: 42px;
+    line-height: 42px;
+    padding: 0 40px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+/* CONTENT SELECTION */
+.container2 {
+    padding: 0 20px;
+}
+
+
+
+
+
 
 /***********
 MEDIAUERY

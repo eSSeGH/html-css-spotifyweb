@@ -231,6 +231,16 @@ dello spazio massimo che può occupare .main-button, ma ne sono consapevole. */
     left: 0;
 }
 
+.dot {
+    background-color: white;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translate(50%, -3px);
+    margin-left: auto;
+    display: none;
+}
+
 .main-length_bar span {
     flex-basis: calc(100%/20);
     flex-shrink: 0;
@@ -314,15 +324,15 @@ SIDEBAR
     gap: 6px;
 }
 
-.navigation a:first-child {
+/* .navigation a:first-child {
     border-left: 5px solid var(--green);
     padding-left: 15px;
     color: white;
-}
+} */
 
 .navigation img {
     height: 24px;
-    color: #a1a1a1;
+    filter: brightness(0) saturate(100%) invert(77%) sepia(1%) saturate(154%) hue-rotate(314deg) brightness(85%) contrast(88%);
 }
 
 /* PLAYLIST */
@@ -451,6 +461,17 @@ MAIN-CONTENT
     margin-bottom: 20px;
 }
 
+/* .main-content .album-card::before {
+    content: "\f144";
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+} */
+
 /* NAVIGATION BAR */
 
 .nav1 {
@@ -518,6 +539,62 @@ MAIN-CONTENT
 
 .popolar-album img {
     border-radius: 50%;
+}
+
+/***********
+HOVER & MORE
+***********/
+
+.upgrade-button:hover {
+    transform: scale(1.2)
+}
+
+.logo:hover {
+    filter: drop-shadow(2px 2px 4px #4444dd)
+}
+
+.nav1 li:hover,
+.info-like i:hover,
+.download:hover,
+.playlist-list li:hover,
+.navigation-a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.navigation-a:hover img{
+    filter: brightness(0) saturate(100%) invert(96%) sepia(97%) saturate(12%) hue-rotate(237deg) brightness(103%) contrast(103%);
+}
+
+.navigation-a:active{
+    color: rgb(255, 255, 255);
+    border-left: 5px solid var(--green);
+    padding-left: 15px;
+}
+
+.playlist-list li:hover {
+    color: white;
+}
+
+.main-content img:hover {
+    filter: brightness(50%);
+}
+
+.main-button i:hover {
+    transform: scale(1.2);
+}
+
+.volume:hover .length_bar-light.volume,
+.main-length_bar:hover .length_bar-light.time {
+    background-color: var(--green);
+}
+
+.volume:hover .dot.volume,
+.main-length_bar:hover .dot.time {
+    display: block;
+}
+
+.nav1 li:active .nav1-link:after {
+ display: block;
 }
 
 /***********

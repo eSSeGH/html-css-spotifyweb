@@ -38,7 +38,7 @@ h1 {
 }
 
 h2 {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 h3 {
@@ -428,8 +428,6 @@ MAIN-CONTENT
 
 .content-selection h1 {
     color: white;
-    padding-top: 25px;
-    padding-bottom: 30px;
 }
 
 .content-selection h2 {
@@ -440,6 +438,10 @@ MAIN-CONTENT
 .content-selection h3 {
     color: var(--grey);
     margin-top: 10px;
+}
+
+.main-content-titles {
+    margin-bottom: 20px;
 }
 
 /* NAVIGATION BAR */
@@ -479,9 +481,10 @@ MAIN-CONTENT
 
 .recently-album .row {
     gap: var(--main-gap);
+    flex-wrap: wrap;
 }
 
-.album-card {
+.recently .album-card {
     flex-basis: calc(100%/6 - 5*var(--main-gap)/6);
     text-align: center;
 }
@@ -490,12 +493,49 @@ MAIN-CONTENT
     width: 100%;
 }
 
+/* GENERATED */
+
+.generated-album .row {
+    gap: var(--main-gap);
+    width: calc(100%/3 - var(--main-gap)/2);
+}
+
+.generated .album-card {
+    flex-basis: calc(100%/2 - var(--main-gap)/2);
+    text-align: center;
+}
+
+/* GENERATED */
+
+/* .generated-album .row {
+    gap: var(--main-gap);
+    width: calc(100%);
+}
+
+.generated .album-card {
+    flex-basis: calc(100%/2 - var(--main-gap)/2);
+    text-align: center;
+} */
+
+
 
 /***********
 MEDIAUERY
 ***********/
 
 /* SIDEBAR */
+
+@media only screen and (max-width: 890px) {
+    .album-card {
+        flex-basis: calc(100%/4 - 3*var(--main-gap)/4);
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .album-card {
+        flex-basis: calc(100%/2 - var(--main-gap)/2);
+    }
+}
 
 @media only screen and (max-width: 552px) {
 

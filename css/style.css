@@ -575,7 +575,7 @@ HOVER & MORE
     color: white;
 }
 
-.main-content img:hover {
+.main-content .album-card:hover {
     filter: brightness(50%);
 }
 
@@ -603,13 +603,10 @@ ANIMATION
 
 .length_bar-light.time {
     animation: progress 35s linear;
+    animation-fill-mode: forwards;
 }
 
 @keyframes progress {
-    from {
-        width: 25%;
-    }
-
     to {
         width: 100%;
     }

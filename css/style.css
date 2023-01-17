@@ -225,8 +225,8 @@ dello spazio massimo che può occupare .main-button, ma ne sono consapevole. */
 
 .length_bar-light {
     background-color: white;
-    width: 25%;
     position: absolute;
+    width: 25%;
     top: 0;
     left: 0;
 }
@@ -550,7 +550,7 @@ HOVER & MORE
 }
 
 .logo:hover {
-    filter: drop-shadow(2px 2px 4px #4444dd)
+    filter: drop-shadow(2px 2px 4px var(--green))
 }
 
 .nav1 li:hover,
@@ -558,7 +558,7 @@ HOVER & MORE
 .download:hover,
 .playlist-list li:hover,
 .navigation-a:hover {
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
 .navigation-a:hover img{
@@ -594,8 +594,27 @@ HOVER & MORE
 }
 
 .nav1 li:active .nav1-link:after {
- display: block;
+    display: block;
 }
+
+/***********
+ANIMATION
+***********/
+
+.length_bar-light.time {
+    animation: progress 35s linear;
+}
+
+@keyframes progress {
+    from {
+        width: 25%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
 
 /***********
 MEDIAUERY

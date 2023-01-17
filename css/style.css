@@ -336,6 +336,7 @@ SIDEBAR
 }
 
 /* PLAYLIST */
+
 .playlist {
     flex-direction: column;
     justify-content: space-between;
@@ -358,9 +359,10 @@ SIDEBAR
     font-size: 14px;
 }
 
-.playlist-list .flex {
+.playlist-list .list-add {
     align-items: center;
     font-size: 16px;
+    gap: 7px;
 }
 
 .playlist li {
@@ -405,7 +407,7 @@ MAIN-CONTENT
 ***********/
 
 .main-content {
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 /* HEADER */
@@ -461,15 +463,17 @@ MAIN-CONTENT
     margin-bottom: 20px;
 }
 
-.main-content .card-img::before {
+.main-content .card-img::after {
+    font-family: "Font Awesome 6 Free";
     content: "\f144";
     color: white;
-    font-size: 100px;
+    font-size: 60px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    filter: drop-shadow( 1px 1px 1px black);
+    display: none;
 }
 
 /* NAVIGATION BAR */
@@ -575,8 +579,12 @@ HOVER & MORE
     color: white;
 }
 
-.main-content .card-img:hover {
+.album-card:hover .card-img{
     filter: brightness(50%);
+}
+
+.album-card:hover .card-img::after{
+    display: block;
 }
 
 .main-button i:hover {
@@ -597,6 +605,11 @@ HOVER & MORE
     display: block;
 }
 
+.name-text:hover .text-song_name {
+    color: white;
+    text-decoration: underline;
+}
+
 /***********
 ANIMATION
 ***********/
@@ -612,7 +625,6 @@ ANIMATION
     }
 }
 
-
 /***********
 MEDIAUERY
 ***********/
@@ -625,7 +637,7 @@ MEDIAUERY
 
     .popolar-album .row,
     .generated-album .row {
-        width: calc(100%/2 - var(--main-gap)/2);
+        width: calc(100%/2 - var(--main-gap));
     }
 
 }
@@ -638,7 +650,7 @@ MEDIAUERY
 
     .popolar-album .row,
     .generated-album .row {
-        width: calc(100% - var(--main-gap)/2);
+        width: calc(100% - var(--main-gap));
     }
 
 }
